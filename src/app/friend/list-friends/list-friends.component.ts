@@ -7,7 +7,13 @@ import { OneFriendComponent } from '../one-friend/one-friend.component';
   templateUrl: './list-friends.component.html',
   styleUrl: './list-friends.component.css'
 })
-export class ListFriendsComponent {
 
+export class ListFriendsComponent {
+  reputation :boolean = false;
+  constructor(){
+    setTimeout(() => {
+      this.reputation = true;
+    }, 3000);
+  }
 }
 
