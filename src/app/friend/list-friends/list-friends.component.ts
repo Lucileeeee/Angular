@@ -1,9 +1,18 @@
 import { Component } from '@angular/core';
 import { OneFriendComponent } from '../one-friend/one-friend.component';
+import { NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
+
+/* NgIf
+En reprenant la base de l'exo précedent 
+Nous allons gérer le rendu conditionnel de la phrase 
+de base on a une phrase qui dit "aucun Ami"
+si on rempli l'input et que l'on click sur le bouton 
+cela affiche une autre phrase 'ami ajouté' en reprenant le contenu de l'input */
 
 @Component({
   selector: 'app-list-friends',
-  imports: [OneFriendComponent],
+  imports: [OneFriendComponent, NgIf],
   templateUrl: './list-friends.component.html',
   styleUrl: './list-friends.component.css'
 })
@@ -55,7 +64,7 @@ export class ListFriendsComponent {
    * @returns {void}
    */
   ajouterAmi(): void {
-    this.ami = 'Ami Ajouter Avec Succès';
+    this.ami = 'Ami Ajouter Avec Succès : ' + this.renduDynamique;
   }
 }
 
