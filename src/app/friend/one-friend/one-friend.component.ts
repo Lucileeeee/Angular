@@ -18,8 +18,6 @@ export class OneFriendComponent {
   getAgeFriend():number{
     return this.age
   }
-
-
 }
 
 /* 
