@@ -72,3 +72,40 @@ qui affiche "Aucun ami"
 Rajouter un bouton  : 
 Quand on click sur le bouton cela change le texte de la variable en "Ami ajouté" 
 On affiche ce qui est tapé dans l'input en passant par l'event */
+
+
+// PARTIE CORRECTION DE JEFF : 
+
+/* import { Component } from '@angular/core';
+import { OneFriendEventBindingComponent } from '../one-friend-event-binding/one-friend-event-binding.component';
+import { OneFriendDynamicStylingComponent } from "../one-friend-dynamic-styling/one-friend-dynamic-styling.component";
+@Component({
+  selector: 'app-list-friends-event-binding',
+  imports: [OneFriendEventBindingComponent],
+  // imports: [OneFriendEventBindingComponent, OneFriendDynamicStylingComponent],
+  templateUrl: './list-friends-event-binding.component.html',
+  styleUrl: './list-friends-event-binding.component.css'
+})
+export class ListFriendsEventBindingComponent {
+  listFriendsAuth:boolean=false;
+  listFriendsCreationStatus:string="🥶 Aucun ami ..."
+  listFriendsInputText:string=""
+  constructor(){
+    // setTimeout(() => {
+    //   this.listFriendsAuth = true;
+    // }, 10000);
+  }
+
+  onAddingFriends():void{
+    this.listFriendsCreationStatus="🥳 Votre ami a été ajouté !"
+  }
+  onUpdateFriendsList(eventInput:any):void{
+    console.log(eventInput);
+    console.log(eventInput.target.value);
+    // console.log((<HTMLInputElement>eventInput.target).value);
+    this.listFriendsInputText = (<HTMLInputElement>eventInput.target).value;
+    //! autre syntaxe de typage avec as
+    // this.listFriendsInputText = (eventInput.target as HTMLInputElement).value;
+
+  }
+} */
