@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { OneFriendComponent } from '../one-friend/one-friend.component';
 import { NgIf } from '@angular/common';
+import { NgFor } from '@angular/common';
 import { CommonModule } from '@angular/common';
 
 /* NgIf
@@ -12,7 +13,7 @@ cela affiche une autre phrase 'ami ajouté' en reprenant le contenu de l'input *
 
 @Component({
   selector: 'app-list-friends',
-  imports: [OneFriendComponent, NgIf],
+  imports: [OneFriendComponent, NgIf, NgFor],
   templateUrl: './list-friends.component.html',
   styleUrl: './list-friends.component.css'
 })
@@ -21,6 +22,12 @@ cela affiche une autre phrase 'ami ajouté' en reprenant le contenu de l'input *
  * Composant représentant la liste des amis.
  */
 export class ListFriendsComponent {
+  listFriendsTab: { name: string; age: number; email: string }[] = [
+    { name: 'Alice', age: 30, email: 'alice@example.com' },
+    { name: 'Bob', age: 25, email: 'bob@example.com' },
+    { name: 'Charlie', age: 35, email: 'charlie@example.com' }
+  ];
+
   /**
    * Indique si la réputation est activée.
    * Initialement à false, elle passe à true après 3 secondes.
@@ -65,7 +72,9 @@ export class ListFriendsComponent {
    */
   ajouterAmi(): void {
     this.ami = 'Ami Ajouter Avec Succès : ' + this.renduDynamique;
+    console.log(this.listFriendsTab[0]);
   }
+
 }
 
 

@@ -5,7 +5,13 @@
 <p *ngIf="renduDynamique;else elseAmi"> {{ ami }} </p>
 <ng-template #elseAmi>Rajouter un Ami, c'est cool</ng-template>
 <button (click)= "ajouterAmi()">Ajouter un Ami</button>
-<app-one-friend></app-one-friend>
+<p *ngFor="let friend of listFriendsTab; let i = index">
+  {{ friend.name }} - {{friend.email }} - {{friend.age}} - {{i}}
+</p>
+  <app-one-friend *ngFor="let friend of listFriendsTab; let i = index">
+    
+  </app-one-friend>
+
 
 <!-- //PARTIE NG IF CORRECTION DE JEFF 
 
