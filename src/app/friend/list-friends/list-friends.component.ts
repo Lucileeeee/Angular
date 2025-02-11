@@ -108,4 +108,20 @@ export class ListFriendsEventBindingComponent {
     // this.listFriendsInputText = (eventInput.target as HTMLInputElement).value;
 
   }
-} */
+} 
+  // PRÉFÉRER NGMODEL!! https://angular.fr/forms/ng-model
+ <textarea [(ngModel)]="avis" name="avis"></textarea>
+export class FormComponent {
+  nom: string = '';
+  email: string = '';
+  avis: string = '';
+
+  onSubmit() {
+    console.log(`Nom: ${this.nom}`);
+    console.log(`Email: ${this.email}`);
+    console.log(`Avis: ${this.avis}`);
+    //Ici on peut envoyer les données à un service ou à une API
+  }
+}
+
+ */

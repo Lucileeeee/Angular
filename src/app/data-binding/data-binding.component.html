@@ -1,0 +1,4 @@
+<p>data-binding works!</p>
+<input type="text" [(ngModel)]="input_value">
+<p>{{input_value}} </p>
+<button [disabled]="input_value.length === 0" (click)= "resetInput()">Vider l'Input</button>
