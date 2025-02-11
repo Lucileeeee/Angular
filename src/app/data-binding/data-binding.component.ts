@@ -21,7 +21,7 @@ export class DataBindingComponent {
    *
    * @type {string}
    */
-  input_value: string = '';
+  input_value: string = 'Lucile Zilbermann';
   /**
    * Réinitialise la valeur de l'input en la mettant à une chaîne vide.
    *
