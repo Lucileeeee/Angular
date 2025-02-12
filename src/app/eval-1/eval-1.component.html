@@ -12,4 +12,12 @@
 
 
 
-
+<!-- 
+//partie correction de jeff :
+<ng-template #showP>
+    <div *ngFor="let element of tab, let i = index">
+        <p [ngStyle]="{backgroundColor:i>=5 ?'lightBlue':'white' }" [ngClass]="{colorBlack:superBool, colorWhite:!superBool}">
+            {{i}}  
+        </p>
+    </div>
+</ng-template> -->

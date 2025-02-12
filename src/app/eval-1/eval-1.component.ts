@@ -30,7 +30,7 @@ export class Eval1Component {
   getColor(){
     if(this.tab.length > 5){
       this.superBool= false;
-      this.backgroundColor ='lightBlue';
+      this.backgroundColor ='lightBlue'; 
     } 
   }
 }
