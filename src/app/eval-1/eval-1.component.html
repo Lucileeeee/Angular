@@ -1,0 +1,15 @@
+<h1>Dans le AppComponent</h1>
+<button (click)="cliquerBouton()"> {{ texteBouton }} </button>
+<div *ngIf="bool===false;else showP"></div>
+<ng-template #showP>
+    <div *ngFor="let element of tab, let i = index">
+        <p [ngStyle]="{ backgroundColor }" [ngClass]="{colorBlack:superBool, colorWhite:!superBool}">
+            {{i}}  
+        </p>
+    </div>
+ 
+</ng-template>
+
+
+
+

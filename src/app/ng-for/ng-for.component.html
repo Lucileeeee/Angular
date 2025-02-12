@@ -1,1 +1,20 @@
-<p>ng-for works!</p>
+<div id="list-friends" class="container-fluid">
+    <h1>List Friends (*ngIf : Conditional Rendering)</h1>
+    <!-- <input (input)="onUpdateFriendsList($event)" type="text" class="form-control w-50 m-auto" placeholder="Nom Ami" aria-label="Username" > -->
+    <input [(ngModel)]="listFriendsInputText" type="text" class="form-control w-50 m-auto" placeholder="Nom Ami"
+      aria-label="Username">
+    <p class="text-center">{{listFriendsInputText}}</p>
+    <h3 *ngIf="listFriendsCreated==true;else noFriends" class="text-center">{{listFriendsCreationStatus}}</h3>
+    <!-- Vivement *ngElse  -->
+    <ng-template #noFriends>
+      <p class="text-center">Aucun Ami... Dommage!</p>
+      <h5>Looser</h5>
+    </ng-template>
+  
+    <button class="btn btn-success ms-5" (click)="onAddingFriends()" [disabled]="listFriendsAuth">Ajouter Ami</button>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+  
+  
+      <app-one-friend-ngmodel></app-one-friend-ngmodel>
+    </div>
+  </div>
