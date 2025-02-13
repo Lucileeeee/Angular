@@ -8,8 +8,11 @@ import { NgForComponent } from './ng-for/ng-for.component';*/
 import { Eval1Component } from './eval-1/eval-1.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { LuneComponent } from './lune/lune.component';
-/* import {RentpaComponent } from './input/rentpa/rentpa.component'; */
-
+import { ObservableComponent } from './observable/observable.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import  {AuthGuardService} from './services/firebase.service';
+import { Eval2Component } from './eval2/eval2.component';
 
 
 export const routes: Routes = [
@@ -22,5 +25,9 @@ export const routes: Routes = [
     {path: 'eval-1', component: Eval1Component},
     {path: 'pokemon-list', component: PokemonListComponent},
     {path: 'lune', component: LuneComponent},
-  /*   {path: 'input', component: RentpaComponent}, */
+    {path: 'observable', component: ObservableComponent},
+    {path: 'register', component: RegisterComponent},
+    {path: 'login', canActivate: [AuthGuardService], component: LoginComponent},
+    {path: 'eval2', component: Eval2Component},
+
 ];

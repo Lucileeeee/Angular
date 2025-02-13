@@ -1,0 +1,5 @@
+<div>
+    <h1>Blog Control Element</h1>
+    <app-add-article (articleCreated)="onArticleAdded($event)" (brouillonCreated)="onBrouillonAdded($event)"></app-add-article>
+    <app-article-element class="eachArticle" *ngFor="let articleItem of articles" [id]="articleItem.id" [title]="articleItem.title" [content]="articleItem.content" [author]="articleItem.author" [date]="articleItem.date" [type]="articleItem.type"></app-article-element>
+</div>

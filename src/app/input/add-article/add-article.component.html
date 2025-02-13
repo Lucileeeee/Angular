@@ -1,0 +1,11 @@
+<div class="article-container">
+    <h2>Ajouter un article</h2>
+    <p>Titre de l'article</p>
+    <input type="text" [(ngModel)]="titleText"/>
+    <p>Contenu de l'article</p>
+    <input type="text" [(ngModel)]="contentText"/>
+    <div class="buttons">
+        <button class="add" (click)="createArticle(titleText, contentText)">Ajouter article</button>
+        <button class="sketch" (click)="createBrouillon(titleText, contentText)">Ajouter brouillon</button>
+    </div>
+</div>
